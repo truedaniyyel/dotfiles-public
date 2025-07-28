@@ -1,0 +1,114 @@
+{
+	// =================================================================
+	// PERSONAL & UI PREFERENCES
+	// =================================================================
+	"workbench.colorTheme": "Andromeda",
+	"workbench.iconTheme": "material-icon-theme",
+	"explorer.compactFolders": false,
+	"workbench.startupEditor": "none",
+	"editor.fontFamily": "'JetBrainsMono Nerd Font', Consolas, 'Courier New', monospace",
+	"editor.fontSize": 14,
+	"editor.fontLigatures": true,
+	"editor.lineHeight": 1.6,
+	"editor.renderWhitespace": "selection",
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.smoothScrolling": true,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"biome.suggestInstallingGlobally": false,
+
+	// =================================================================
+	// FORMATTING & LINTING CONFIGURATION
+	// =================================================================
+	"files.autoSave": "onFocusChange",
+	"editor.formatOnSave": true,
+
+	// --- Set Prettier as the default formatter for most files.
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+
+	// --- Override the default to use Biome for specific languages.
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+
+	// --- Use Prettier for languages with Prettier-specific plugins.
+	"[astro]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+
+	// --- Configure Biome's linting and import sorting on save.
+	"editor.codeActionsOnSave": {
+		"source.organizeImports.biome": "explicit",
+		"quickfix.biome": "explicit"
+	},
+
+	// =================================================================
+	// VIM CONFIGURATION 
+	// =================================================================
+	"vim.leader": "<space>",
+	"vim.insertModeKeyBindings": [
+		{
+			"before": ["j", "k"],
+			"after": ["<Esc>"]
+		}
+	],
+	"vim.normalModeKeyBindingsNonRecursive": [
+		// --- Window Management ---
+		{
+			"before": ["<leader>", "v", "s"],
+			"commands": ["workbench.action.splitEditorRight"]
+		},
+		{
+			"before": ["<leader>", "s", "s"],
+			"commands": ["workbench.action.splitEditorDown"]
+		},
+		{
+			"before": ["<C-h>"],
+			"commands": ["workbench.action.focusLeftGroup"]
+		},
+		{
+			"before": ["<C-j>"],
+			"commands": ["workbench.action.focusBelowGroup"]
+		},
+		{
+			"before": ["<C-k>"],
+			"commands": ["workbench.action.focusAboveGroup"]
+		},
+		{
+			"before": ["<C-l>"],
+			"commands": ["workbench.action.focusRightGroup"]
+		},
+		// --- File & Editor Management ---
+		{
+			"before": ["<leader>", "w"],
+			"commands": ["workbench.action.files.save"]
+		},
+		{
+			"before": ["<leader>", "e"],
+			"commands": ["workbench.action.toggleSidebarVisibility"]
+		},
+		{
+			"before": ["<leader>", "q"],
+			"commands": ["workbench.action.closeActiveEditor"]
+		},
+		{
+			"before": ["<leader>", "f", "d"],
+			"commands": ["editor.action.formatDocument"]
+		}
+	]
+}
