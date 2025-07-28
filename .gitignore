@@ -1,0 +1,59 @@
+# ===================================================================
+#  Secrets & Credentials - NEVER COMMIT THESE
+# ===================================================================
+*.env
+.env
+.private
+.secret
+.secrets
+credentials
+*token*
+
+# SSH keys
+/ssh/
+id_rsa
+id_dsa
+id_ed25519
+
+# GnuPG keys
+/gnupg/
+secring.gpg
+
+# AWS credentials
+.aws/credentials
+
+# Kubernetes config
+.kube/config
+
+# ===================================================================
+#  Local / Machine-Specific Overrides
+# ===================================================================
+*.local
+*.override
+*private*
+
+# Git local config (contains user name/email, often machine-specific)
+.gitconfig.local
+
+# ===================================================================
+#  History Files
+# ===================================================================
+.bash_history
+.zsh_history
+.node_repl_history
+.python_history
+
+# ===================================================================
+#  Cache, Logs & Temporary Files
+# ===================================================================
+*.swp
+*.swo
+*~
+*.bak
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# Caches
+.cache/
